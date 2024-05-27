@@ -1,6 +1,4 @@
 const crypto = require('crypto');
-const fs = require('fs');
-let jsonData = JSON.parse(fs.readFileSync('temp.json', 'utf-8'));
 const SECRET_IV = "secretIV";
 const ECNRYPTION_METHOD = "aes-256-cbc";
 const expiryTime = 1;//in minutes's
