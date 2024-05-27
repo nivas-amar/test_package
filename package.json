@@ -1,7 +1,6 @@
 {
   "name": "encrypt_decrypt_nivas",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
   "main": "index.js",
   
