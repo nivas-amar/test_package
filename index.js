@@ -1,6 +1,5 @@
-import crypto from 'crypto';
-import fs from 'fs';
-import { Module } from 'module';
+const crypto = require('crypto');
+const fs = require('fs');
 let jsonData = JSON.parse(fs.readFileSync('temp.json', 'utf-8'));
 const SECRET_IV = "secretIV";
 const ECNRYPTION_METHOD = "aes-256-cbc";
@@ -52,7 +51,7 @@ const calPerformance = (startTime)=>{
   }
   
   // Decrypt data
-  export function decryptData(message) {   
+const  decryptData = (message)=> {   
     const start = performance.now();
     let response = {}; 
     try {
@@ -75,4 +74,4 @@ const calPerformance = (startTime)=>{
     return response;
   }
 
-module.exports = {encryptData,decryptData}
+  module.exports = {encryptData,decryptData}
