@@ -1,0 +1,21 @@
+{
+  "name": "encrypt_decrypt",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nivas-amar/test_package.git"
+  },
+  "author": "amar potdar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nivas-amar/test_package/issues"
+  },
+  "homepage": "https://github.com/nivas-amar/test_package#readme"
+}
