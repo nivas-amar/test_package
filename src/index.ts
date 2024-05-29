@@ -32,11 +32,10 @@ const calPerformance = (startTime:number)=>{
 }
 
   // Encrypt data
-  export function encryptData(message:{key:string,data:any}):response{
+  export function encryptData(key:string,data:any):response{
     const start = performance.now();
     let response:response; 
     try {
-      const {key,data}  = message;
       const newData = {token:(new Date().getTime()),data:data};
       const cipher = createCipheriv(ECNRYPTION_METHOD, generateKey(key), encryptionIV)
       const encrypted = Buffer.from(
@@ -51,11 +50,10 @@ const calPerformance = (startTime:number)=>{
   }
   
   // Decrypt data
-  export function decryptData(message:{key:string,data:any}):response {
+  export function decryptData(key:string,data:any):response {
     const start = performance.now();
     let response :response; 
     try {
-      const {key,data}  = message;
       const buff = Buffer.from(data, 'base64')
       const decipher = createDecipheriv(ECNRYPTION_METHOD, generateKey(key), encryptionIV)
       let res:any = (decipher.update(buff.toString('utf8'), 'hex', 'utf8') + decipher.final('utf8') ) // Decrypts data and converts to utf8
